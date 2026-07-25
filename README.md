@@ -36,3 +36,44 @@ IF vertex is not in visited:
         CALL DFS(adjacent_node, visited)
 
 END FUNCTION
+# PSEUDO CODE
+----------------------------------------------------------- #3 UNIFORM COST SEARCH (UCS) PROGRAM -----------------------------------------------------------
+
+FUNCTION UCS(start, goal)
+
+frontier ← empty priority queue
+visited ← empty set
+
+INSERT (0, start, [start]) INTO frontier
+
+WHILE frontier is not empty
+
+    (cost, node, path) ← REMOVE node with minimum cost
+
+    IF node = goal THEN
+
+        DISPLAY path
+        DISPLAY cost
+        STOP
+
+    END IF
+
+    IF node is not in visited THEN
+
+        ADD node TO visited
+
+        FOR each (neighbor, edge_cost) OF node
+
+            new_cost ← cost + edge_cost
+
+            INSERT (new_cost, neighbor, path + neighbor) INTO frontier
+
+        END FOR
+
+    END IF
+
+END WHILE
+
+DISPLAY "Goal Not Found"
+
+END FUNCTION
