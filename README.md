@@ -21,3 +21,18 @@ WHILE queue is not empty:
             INSERT adjacent_node INTO queue
 
 DISPLAY "BFS Traversal :", visited
+----------------------------------------------------------- #2 DFS PROGRAM -----------------------------------------------------------
+
+FUNCTION DFS(vertex, visited):
+
+IF vertex is not in visited:
+
+    ADD vertex TO visited
+
+    DISPLAY vertex
+
+    FOR each adjacent_node OF vertex:
+
+        CALL DFS(adjacent_node, visited)
+
+END FUNCTION
