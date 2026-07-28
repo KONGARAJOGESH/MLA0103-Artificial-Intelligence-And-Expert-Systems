@@ -344,3 +344,263 @@ ELSE
 END IF
 
 STOP
+============================================================
+1. EXPERIMENT NAME:
+A* Search Algorithm Implementation
+
+PSEUDOCODE:
+============================================================
+
+START
+
+Input graph, heuristic values, start node and goal node
+
+Create priority queue
+
+Insert start node into priority queue
+
+Set cost of start node as 0
+
+Set parent of start node as NULL
+
+WHILE priority queue is not empty:
+
+    Remove node with lowest f value
+
+    IF current node is goal node:
+
+        Trace path using parent nodes
+
+        Display shortest path and cost
+
+        STOP
+
+    FOR each neighbour of current node:
+
+        Calculate new path cost
+
+        IF new cost is smaller than previous cost:
+
+            Update cost
+
+            Calculate f value = cost + heuristic
+
+            Add neighbour to priority queue
+
+            Store parent node
+
+END
+
+
+============================================================
+2. EXPERIMENT NAME:
+Water Jug Problem Using Breadth First Search (BFS)
+
+PSEUDOCODE:
+============================================================
+
+START
+
+Initialize jug capacities
+
+Set initial state and goal state
+
+Create an empty queue
+
+Insert initial state into queue
+
+Create visited list
+
+WHILE queue is not empty:
+
+    Remove first state from queue
+
+    IF current state matches goal state:
+
+        Display solution path
+
+        STOP
+
+    Mark state as visited
+
+    Generate possible water transfer states
+
+    FOR each new state:
+
+        IF state is not visited:
+
+            Add state into queue
+
+IF goal state is not found:
+
+    Display "No Solution"
+
+END
+
+
+============================================================
+3. EXPERIMENT NAME:
+Water Jug Problem Using State Space Search
+
+PSEUDOCODE:
+============================================================
+
+START
+
+Initialize jug quantities
+
+Display initial state
+
+Perform valid pouring operations
+
+Generate new states
+
+Display each generated state
+
+Repeat operations until goal state is reached
+
+Display goal achieved message
+
+END
+
+
+============================================================
+4. EXPERIMENT NAME:
+Depth First Search (DFS) Algorithm Implementation
+
+PSEUDOCODE:
+============================================================
+
+START
+
+Input graph and starting node
+
+Create an empty visited list
+
+Call DFS function
+
+DFS(node):
+
+    IF node is not visited:
+
+        Mark node as visited
+
+        Display node
+
+        FOR each adjacent node:
+
+            Call DFS for adjacent node
+
+Display DFS traversal order
+
+END
+
+
+============================================================
+5. EXPERIMENT NAME:
+Greedy Best First Search (GBFS) Algorithm Implementation
+
+PSEUDOCODE:
+============================================================
+
+START
+
+Input graph, heuristic values, start node and goal node
+
+Create priority queue
+
+Insert start node with heuristic value
+
+Create visited list
+
+WHILE queue is not empty:
+
+    Remove node with lowest heuristic value
+
+    IF node is goal node:
+
+        Display path
+
+        STOP
+
+    Mark node as visited
+
+    FOR each neighbour node:
+
+        Calculate heuristic value
+
+        Add neighbour into priority queue
+
+IF goal is not reached:
+
+    Display "Path Not Found"
+
+END
+
+
+============================================================
+6. EXPERIMENT NAME:
+Backward Chaining Using Prolog
+
+PSEUDOCODE:
+============================================================
+
+START
+
+Define facts and rules
+
+Enter query (goal)
+
+Check whether goal matches any fact
+
+IF goal is a fact:
+
+    Return TRUE
+
+ELSE:
+
+    Find rule that can prove the goal
+
+    Check conditions of the rule
+
+    Recursively prove sub goals
+
+IF all conditions are true:
+
+    Return TRUE
+
+ELSE:
+
+    Return FALSE
+
+END
+
+
+============================================================
+7. EXPERIMENT NAME:
+Forward Chaining Using Prolog
+
+PSEUDOCODE:
+============================================================
+
+START
+
+Define initial facts and rules
+
+Store known facts
+
+Repeat until no new facts are generated:
+
+    Select a rule
+
+    Check rule conditions
+
+    Generate new conclusion
+
+    Add conclusion to known facts
+
+Check required query
+
+Display result
+
+END
